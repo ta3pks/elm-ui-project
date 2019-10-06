@@ -22,6 +22,11 @@ pub fn create_files(base: &str) {
             "public/index.html",
             include_str!("../static_includes/index.html"),
         ),
-        ("Main.elm", include_str!("../static_includes/Main.elm")),
+        ("src/Main.elm", include_str!("../static_includes/Main.elm")),
+        ("Makefile", include_str!("../static_includes/Makefile")),
+        (
+            ".scripts/filehash.sh",
+            include_str!("../static_includes/filehash.sh"),
+        ),
     ];
 }
