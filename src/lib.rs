@@ -15,6 +15,7 @@ pub fn mkdirs(base: &str) {
     ]
     .iter()
     .for_each(|dir| builder.create(format!("{}/{}", base, dir)).unwrap());
+    create_files(base);
 }
 pub fn create_files(base: &str) {
     vec![
@@ -28,5 +29,25 @@ pub fn create_files(base: &str) {
             ".scripts/filehash.sh",
             include_str!("../static_includes/filehash.sh"),
         ),
-    ];
+        (
+            "elm.json",
+            &include_str!("../static_includes/elm.json").replace("{{version}}", &elm_version()),
+        ),
+    ]
+    .iter()
+    .for_each(|(f, c)| {
+        std::fs::write(format!("{}/{}", base, f), c).expect("cannot write needed files")
+    });
+}
+fn elm_version() -> String {
+    String::from_utf8_lossy(
+        std::process::Command::new("elm")
+            .arg("--version")
+            .output()
+            .expect("elm is not installed or not in the path")
+            .stdout
+            .as_slice(),
+    )
+    .trim()
+    .into()
 }

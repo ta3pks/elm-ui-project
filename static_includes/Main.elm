@@ -1,6 +1,6 @@
 module Main exposing (main)
 
-import Element exposing (el, fill, height, layout, text, width)
+import Element exposing (el, fill, height, layout, none, text, width)
 import Html exposing (Html)
 
 
