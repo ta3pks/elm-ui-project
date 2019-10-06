@@ -33,6 +33,14 @@ pub fn create_files(base: &str) {
             "elm.json",
             &include_str!("../static_includes/elm.json").replace("{{version}}", &elm_version()),
         ),
+        (
+            "config.prod.js",
+            include_str!("../static_includes/config.js"),
+        ),
+        (
+            "config.dev.js",
+            include_str!("../static_includes/config.js"),
+        ),
     ]
     .iter()
     .for_each(|(f, c)| {
