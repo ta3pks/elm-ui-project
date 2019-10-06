@@ -1,3 +1,4 @@
-fn main() {
-    println!("Hello, world!");
+fn main()
+{
+    elm_ui_project::mkdirs();
 }
