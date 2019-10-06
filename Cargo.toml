@@ -3,6 +3,8 @@ name = "elm-ui-project"
 version = "0.1.0"
 authors = ["nikos efthias <nikos@mugsoft.io>"]
 edition = "2018"
+description="Elm-ui project boilerplate generator"
+license= "MIT"
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
