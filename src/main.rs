@@ -1,4 +1,3 @@
-fn main()
-{
-    elm_ui_project::mkdirs();
+fn main() {
+    elm_ui_project::cli();
 }
