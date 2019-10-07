@@ -31,7 +31,7 @@ hash:${OUTFILE}
 	sh .scripts/filehash.sh $< > $@
 	cp -v $< "dist/`sh .scripts/filehash.sh $<`.js"
 
-dist/index.html:public/index.html hash dist/config.js
+dist/index.html:public/index.html hash dist/config.js pubfolders
 	sed  's/{{elmout}}/${shell cat hash}/' $< > $@
 dist/config.js:config.dev.js config.prod.js
 ifeq (${ELMENV},PRODUCTION)
