@@ -40,7 +40,7 @@ else
 	cp config.dev.js $@
 endif
 
-pubfolders:dist/index.html
+pubfolders:
 	cp -r ${PUBFOLDERS} dist/
 devindex:public/index.html dist/config.js pubfolders
 	sed  's/{{elmout}}/out/' $< > dist/index.html
