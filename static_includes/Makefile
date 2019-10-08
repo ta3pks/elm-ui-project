@@ -42,7 +42,7 @@ endif
 
 pubfolders:dist/index.html
 	cp -r ${PUBFOLDERS} dist/
-devindex:public/index.html dist/config.js
+devindex:public/index.html dist/config.js pubfolders
 	sed  's/{{elmout}}/out/' $< > dist/index.html
 
 clean:
