@@ -1,6 +1,6 @@
 [package]
 name        = "elm-ui-project"
-version     = "0.1.5"
+version     = "0.1.6"
 authors     = ["nikos efthias <nikos@mugsoft.io>"]
 edition     = "2018"
 description = "Elm-ui project boilerplate generator"

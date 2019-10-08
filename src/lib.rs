@@ -42,6 +42,7 @@ pub fn create_files(base: &str) {
             include_str!("../static_includes/config.js"),
         ),
         (".gitignore", include_str!("../static_includes/gitignore")),
+        (".ctags", include_str!("../static_includes/ctags")),
     ]
     .iter()
     .for_each(|(f, c)| {
