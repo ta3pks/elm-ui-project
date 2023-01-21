@@ -14,5 +14,5 @@ readme 		= "Readme.md"
 clap = "2.33"
 
 [dependencies.git2]
-version          = "0.10"
+version          = "0.16"
 default-features = false
